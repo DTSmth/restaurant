@@ -28,6 +28,7 @@ mod front_of_house {
 }
 
 mod back_of_house {
+    use crate::front_of_house::hosting;
     pub struct Breakfast {
         pub toast: String,
         seasonal_fruit: String,
@@ -45,5 +46,9 @@ mod back_of_house {
     pub enum Appetizer {
         Soup,
         Salad,
+    }
+
+    pub fn eat_at_restaurant() {
+        hosting::add_to_waitlist();
     }
 }
